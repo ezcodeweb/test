@@ -145,6 +145,16 @@ recognition.addEventListener("result", (e) => {
       console.log("opening GitHub");
       window.open("https://github.com/");
     }
+    if (text.includes("Google Maps") || text.includes("Maps")) {
+      let str = text;
+      str = str.replace("search", "");
+      p = document.createElement("p");
+      p.classList.add("replay");
+      p.innerText = "opening Maps 🚩";
+      texts.appendChild(p);
+      console.log("opening Maps");
+      window.open("https://www.google.com/maps");
+    }
     if (text.includes("search")) {
       let str = text;
       str = str.replace("search", "");
@@ -157,7 +167,8 @@ recognition.addEventListener("result", (e) => {
     }
     if (text.includes("find") || text.includes("Find")) {
       let str = text;
-      str = str.replace("search", "");
+      str.toLowerCase();
+      str = str.replace("find", "");
       p = document.createElement("p");
       p.classList.add("replay");
       p.innerText = "opening...🔍";
@@ -165,15 +176,14 @@ recognition.addEventListener("result", (e) => {
       console.log("opening...");
       window.open("https://www.google.com/search?q=" + str);
     }
-    if (text.includes("Google Maps") || text.includes("Maps")) {
+    if (text.includes("What is") || text.includes("what is") || text.includes("who is") || text.includes("Who is")) {
       let str = text;
-      str = str.replace("search", "");
       p = document.createElement("p");
       p.classList.add("replay");
-      p.innerText = "opening Maps 🚩";
+      p.innerText = "opening...🔍";
       texts.appendChild(p);
-      console.log("opening Maps");
-      window.open("https://www.google.com/maps");
+      console.log("opening...");
+      window.open("https://www.google.com/search?q=" + str);
     }
     p = document.createElement("p");
   }
