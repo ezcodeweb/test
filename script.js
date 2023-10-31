@@ -155,6 +155,16 @@ recognition.addEventListener("result", (e) => {
       console.log("opening...");
       window.open("https://www.google.com/search?q=" + str);
     }
+    if (text.includes("find") || text.includes("Find")) {
+      let str = text;
+      str = str.replace("search", "");
+      p = document.createElement("p");
+      p.classList.add("replay");
+      p.innerText = "opening...🔍";
+      texts.appendChild(p);
+      console.log("opening...");
+      window.open("https://www.google.com/search?q=" + str);
+    }
     if (text.includes("Google Maps") || text.includes("Maps")) {
       let str = text;
       str = str.replace("search", "");
