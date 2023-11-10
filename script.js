@@ -202,6 +202,7 @@ recognition.addEventListener("result", (e) => {
       let str = text;
       str.toLowerCase();
       str = str.replace("tìm", "");
+      str = str.replace("Tìm", "");
       p = document.createElement("p");
       p.classList.add("replay");
       p.innerText = "opening...🔍";
@@ -224,6 +225,7 @@ recognition.addEventListener("result", (e) => {
       let str = text;
       str.toLowerCase();
       str = str.replace("xem", "");
+      str = str.replace("Xem", "");
       p = document.createElement("p");
       p.classList.add("replay");
       p.innerText = "opening...🔍";
