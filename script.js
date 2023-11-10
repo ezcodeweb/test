@@ -198,9 +198,21 @@ recognition.addEventListener("result", (e) => {
       console.log("opening...");
       window.open("https://www.google.com/search?q=" + str);
     }
-    if (text.includes("YouTube with")) {
+    if (text.includes("Watch") || text.includes("watch")) {
       let str = text;
-      str = str.replace("YouTube with", "");
+      str.toLowerCase();
+      str = str.replace("watch", "");
+      p = document.createElement("p");
+      p.classList.add("replay");
+      p.innerText = "opening...🔍";
+      texts.appendChild(p);
+      console.log("opening...");
+      window.open("https://www.youtube.com/results?search_query=" + str);
+    }
+    if (text.includes("See") || text.includes("see")) {
+      let str = text;
+      str.toLowerCase();
+      str = str.replace("see", "");
       p = document.createElement("p");
       p.classList.add("replay");
       p.innerText = "opening...🔍";
