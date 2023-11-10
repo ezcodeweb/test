@@ -185,6 +185,15 @@ recognition.addEventListener("result", (e) => {
       console.log("opening...");
       window.open("https://www.google.com/search?q=" + str);
     }
+    if (text.includes("YouTube with") || text.include("YouTube search with")) {
+      let str = text;
+      p = document.createElement("p");
+      p.classList.add("replay");
+      p.innerText = "opening...🔍";
+      texts.appendChild(p);
+      console.log("opening...");
+      window.open("https://www.youtube.com/results?search_query=" + str);
+    }
     p = document.createElement("p");
   }
 });
