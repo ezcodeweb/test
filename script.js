@@ -198,10 +198,32 @@ recognition.addEventListener("result", (e) => {
       console.log("opening...");
       window.open("https://www.google.com/search?q=" + str);
     }
+    if (text.includes("Tìm") || text.includes("tìm")) {
+      let str = text;
+      str.toLowerCase();
+      str = str.replace("tìm", "");
+      p = document.createElement("p");
+      p.classList.add("replay");
+      p.innerText = "opening...🔍";
+      texts.appendChild(p);
+      console.log("opening...");
+      window.open("https://www.google.com/search?q=" + str);
+    }
     if (text.includes("Watch") || text.includes("watch")) {
       let str = text;
       str.toLowerCase();
       str = str.replace("watch", "");
+      p = document.createElement("p");
+      p.classList.add("replay");
+      p.innerText = "opening...🔍";
+      texts.appendChild(p);
+      console.log("opening...");
+      window.open("https://www.youtube.com/results?search_query=" + str);
+    }
+    if (text.includes("Xem") || text.includes("xem")) {
+      let str = text;
+      str.toLowerCase();
+      str = str.replace("xem", "");
       p = document.createElement("p");
       p.classList.add("replay");
       p.innerText = "opening...🔍";
