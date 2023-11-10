@@ -176,8 +176,10 @@ recognition.addEventListener("result", (e) => {
       console.log("opening...");
       window.open("https://www.google.com/search?q=" + str);
     }
-    if (text.includes("What is") || text.includes("what is") || text.includes("who is") || text.includes("Who is")) {
+    if (text.includes("What is") || text.includes("what is")) {
       let str = text;
+      str.toLowerCase();
+      str = str.replace("what is", "");
       p = document.createElement("p");
       p.classList.add("replay");
       p.innerText = "opening...🔍";
@@ -185,8 +187,21 @@ recognition.addEventListener("result", (e) => {
       console.log("opening...");
       window.open("https://www.google.com/search?q=" + str);
     }
-    if (text.includes("YouTube with") || text.include("YouTube search with")) {
+    if (text.includes("Who is") || text.includes("who is")) {
       let str = text;
+      str.toLowerCase();
+      str = str.replace("who is", "");
+      p = document.createElement("p");
+      p.classList.add("replay");
+      p.innerText = "opening...🔍";
+      texts.appendChild(p);
+      console.log("opening...");
+      window.open("https://www.google.com/search?q=" + str);
+    }
+    if (text.includes("YouTube with")) {
+      let str = text;
+      str.toLowerCase();
+      str = str.replace("YouTube with", "");
       p = document.createElement("p");
       p.classList.add("replay");
       p.innerText = "opening...🔍";
