@@ -200,7 +200,6 @@ recognition.addEventListener("result", (e) => {
     }
     if (text.includes("YouTube with")) {
       let str = text;
-      str.toLowerCase();
       str = str.replace("YouTube with", "");
       p = document.createElement("p");
       p.classList.add("replay");
