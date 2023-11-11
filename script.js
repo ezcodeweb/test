@@ -233,6 +233,18 @@ recognition.addEventListener("result", (e) => {
       console.log("opening...");
       window.open("https://www.youtube.com/results?search_query=" + str);
     }
+    if (text.includes("Mở") || text.includes("mở")) {
+      let str = text;
+      str.toLowerCase();
+      str = str.replace("mở", "");
+      str = str.replace("Mở", "");
+      p = document.createElement("p");
+      p.classList.add("replay");
+      p.innerText = "opening...🔍";
+      texts.appendChild(p);
+      console.log("opening...");
+      window.open("https://www.youtube.com/results?search_query=" + str);
+    }
     if (text.includes("See") || text.includes("see")) {
       let str = text;
       str.toLowerCase();
