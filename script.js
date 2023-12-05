@@ -21,10 +21,11 @@ recognition.addEventListener("result", (e) => {
       p = document.createElement("p");
       p.classList.add("replay");
       p.innerText = "opening youtube\n🎭";
+      let pppp = "opening youtube";
       texts.appendChild(p);
       console.log("opening youtube");
       window.open("https://www.youtube.com");
-      const utterance = new SpeechSynthesisUtterance(p.innerText);
+      const utterance = new SpeechSynthesisUtterance(pppp);
       window.speechSynthesis.speak(utterance);      
     }
     if (text.includes("open Gmail")) {
