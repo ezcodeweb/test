@@ -284,7 +284,7 @@ recognition.addEventListener("end", () => {
 
 recognition.start();
 
-function sp(let a) {
+function sp(a) {
 const utterance = new SpeechSynthesisUtterance(a);
 window.speechSynthesis.speak(utterance);      
 }
