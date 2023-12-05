@@ -24,6 +24,8 @@ recognition.addEventListener("result", (e) => {
       texts.appendChild(p);
       console.log("opening youtube");
       window.open("https://www.youtube.com");
+      const utterance = new SpeechSynthesisUtterance(p.innerText);
+      window.speechSynthesis.speak(utterance);      
     }
     if (text.includes("open Gmail")) {
       p = document.createElement("p");
