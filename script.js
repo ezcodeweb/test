@@ -27,7 +27,7 @@ recognition.addEventListener("result", (e) => {
       let go = "opening youtube";
       sp(go);
     }
-    if (text.includes("open Gmail")) {
+    if (text.includes("open Gmail") || text.includes("Open Gmail")) {
       p = document.createElement("p");
       p.classList.add("replay");
       p.innerText = "opening gmail\n📧";
@@ -37,7 +37,7 @@ recognition.addEventListener("result", (e) => {
       let go = "opening gmail";
       sp(go);
     }
-    if (text.includes("open Facebook")) {
+    if (text.includes("open Facebook") || text.includes("Open Facebook")) {
       p = document.createElement("p");
       p.classList.add("replay");
       p.innerText = "opening facebook\n👌";
@@ -47,7 +47,7 @@ recognition.addEventListener("result", (e) => {
       let go = "opening facebook";
       sp(go);
     }
-    if (text.includes("open map")) {
+    if (text.includes("open map") || text.includes("Open map")) {
       p = document.createElement("p");
       p.classList.add("replay");
       p.innerText = "opening map\n😊";
@@ -77,7 +77,7 @@ recognition.addEventListener("result", (e) => {
       let go = "opening new tab";
       sp(go);
     }
-    if (text.includes("open google meet") || text.includes("open meet")) {
+    if (text.includes("open google meet") || text.includes("open meet") || text.includes("Open google meet") || text.includes("Open meet")) {
       p = document.createElement("p");
       p.classList.add("replay");
       p.innerText = "opening google meet\n👨👨‍👦‍👦";
@@ -107,7 +107,7 @@ recognition.addEventListener("result", (e) => {
       let go = "opening Codepen";
       sp(go);
     }
-    if (text.includes("open Instagram") || text.includes("open instagram")) {
+    if (text.includes("open Instagram") || text.includes("open instagram") || text.includes("Open Instagram") || text.includes("Open instagram")) {
       p = document.createElement("p");
       p.classList.add("replay");
       p.innerText = "opening Instagram\n📸";
@@ -117,7 +117,7 @@ recognition.addEventListener("result", (e) => {
       let go = "opening Instagram";
       sp(go);
     }
-    if (text.includes("open WhatsApp")) {
+    if (text.includes("open WhatsApp") || text.includes("Open WhatsApp")) {
       p = document.createElement("p");
       p.classList.add("replay");
       p.innerText = "opening WhatsApp\n📫";
@@ -127,7 +127,7 @@ recognition.addEventListener("result", (e) => {
       let go = "opening WhatsApp";
       sp(go);
     }
-    if (text.includes("open GitHub")) {
+    if (text.includes("open GitHub") || text.includes("open GitHub")) {
       p = document.createElement("p");
       p.classList.add("replay");
       p.innerText = "opening GitHub\n📬";
@@ -149,9 +149,10 @@ recognition.addEventListener("result", (e) => {
       let go = "opening Maps";
       sp(go);
     }
-    if (text.includes("search")) {
+    if (text.includes("search") || text.includes("Search")) {
       let str = text;
       str = str.replace("search", "");
+      str = str.replace("Search", "");
       p = document.createElement("p");
       p.classList.add("replay");
       p.innerText = "opening...🔍";
@@ -165,6 +166,7 @@ recognition.addEventListener("result", (e) => {
       let str = text;
       str.toLowerCase();
       str = str.replace("find", "");
+      str = str.replace("Find", "");
       p = document.createElement("p");
       p.classList.add("replay");
       p.innerText = "opening...🔍";
@@ -178,6 +180,7 @@ recognition.addEventListener("result", (e) => {
       let str = text;
       str.toLowerCase();
       str = str.replace("what is", "");
+      str = str.replace("What is", "");
       p = document.createElement("p");
       p.classList.add("replay");
       p.innerText = "opening...🔍";
@@ -191,6 +194,7 @@ recognition.addEventListener("result", (e) => {
       let str = text;
       str.toLowerCase();
       str = str.replace("who is", "");
+      str = str.replace("Who is", "");
       p = document.createElement("p");
       p.classList.add("replay");
       p.innerText = "opening...🔍";
@@ -218,6 +222,7 @@ recognition.addEventListener("result", (e) => {
       let str = text;
       str.toLowerCase();
       str = str.replace("watch", "");
+      str = str.replace("Watch", "");
       p = document.createElement("p");
       p.classList.add("replay");
       p.innerText = "opening...🔍";
@@ -259,6 +264,7 @@ recognition.addEventListener("result", (e) => {
       let str = text;
       str.toLowerCase();
       str = str.replace("see", "");
+      str = str.replace("See", "");
       p = document.createElement("p");
       p.classList.add("replay");
       p.innerText = "opening...🔍";
