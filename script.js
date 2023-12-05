@@ -24,6 +24,8 @@ recognition.addEventListener("result", (e) => {
       texts.appendChild(p);
       console.log("opening youtube");
       window.open("https://www.youtube.com");
+      let go = "opening youtube";
+      sp(go);
     }
     if (text.includes("open Gmail")) {
       p = document.createElement("p");
@@ -32,6 +34,8 @@ recognition.addEventListener("result", (e) => {
       texts.appendChild(p);
       console.log("opening gmail");
       window.open("https://mail.google.com/mail/u/0/");
+      let go = "opening gmail";
+      sp(go);
     }
     if (text.includes("open Facebook")) {
       p = document.createElement("p");
@@ -40,6 +44,8 @@ recognition.addEventListener("result", (e) => {
       texts.appendChild(p);
       console.log("opening facebook");
       window.open("https://www.facebook.com/");
+      let go = "opening facebook";
+      sp(go);
     }
     if (text.includes("open map")) {
       p = document.createElement("p");
@@ -48,6 +54,8 @@ recognition.addEventListener("result", (e) => {
       texts.appendChild(p);
       console.log("opening map");
       window.open("https://www.google.com/maps/");
+      let go = "opening map";
+      sp(go);
     }
     if (text.includes("open translate") || text.includes("Open translate")) {
       p = document.createElement("p");
@@ -56,6 +64,8 @@ recognition.addEventListener("result", (e) => {
       texts.appendChild(p);
       console.log("opening translate");
       window.open("https://translate.google.com/");
+      let go = "opening translate";
+      sp(go);
     }
     if (text.includes("open new tab") || text.includes("open GoogleSearch") || text.includes("open search") || text.includes("open Google") || text.includes("Open new tab") || text.includes("Open GoogleSearch") || text.includes("Open search") || text.includes("Open Google")) {
       p = document.createElement("p");
@@ -64,6 +74,8 @@ recognition.addEventListener("result", (e) => {
       texts.appendChild(p);
       console.log("opening new tab");
       window.open("https://google.com/");  
+      let go = "opening new tab";
+      sp(go);
     }
     if (text.includes("open google meet") || text.includes("open meet")) {
       p = document.createElement("p");
@@ -72,6 +84,8 @@ recognition.addEventListener("result", (e) => {
       texts.appendChild(p);
       console.log("opening google meet");
       window.open("https://meet.google.com/");
+      let go = "opening google meet";
+      sp(go);
     }
     if (text.includes("open messenger") || text.includes("open Messenger") || text.includes("Open messenger") || text.includes("Open Messenger")) {
       p = document.createElement("p");
@@ -80,6 +94,8 @@ recognition.addEventListener("result", (e) => {
       texts.appendChild(p);
       console.log("opening messenger");
       window.open("https://www.facebook.com/messages/");
+      let go = "opening messenger";
+      sp(go);
     }
     if (text.includes("open code pen") || text.includes("open codepen") || text.includes("open code gallery") || text.includes("Open code pen") || text.includes("Open codepen") || text.includes("Open code gallery")) {
       p = document.createElement("p");
@@ -88,14 +104,8 @@ recognition.addEventListener("result", (e) => {
       texts.appendChild(p);
       console.log("opening Codepen");
       window.open("https://codepen.io/trending");
-    }
-    if (text.includes("open edx") || text.includes("open Edx") || text.includes("open learning code") || text.includes("open learning")) {
-      p = document.createElement("p");
-      p.classList.add("replay");
-      p.innerText = "opening Edx\n✌";
-      texts.appendChild(p);
-      console.log("opening Edx");
-      window.open("https://courses.edx.org/dashboard");
+      let go = "opening Codepen";
+      sp(go);
     }
     if (text.includes("open Instagram") || text.includes("open instagram")) {
       p = document.createElement("p");
@@ -104,6 +114,8 @@ recognition.addEventListener("result", (e) => {
       texts.appendChild(p);
       console.log("opening Instagram");
       window.open("https://www.instagram.com/");
+      let go = "opening Instagram";
+      sp(go);
     }
     if (text.includes("open WhatsApp")) {
       p = document.createElement("p");
@@ -112,6 +124,8 @@ recognition.addEventListener("result", (e) => {
       texts.appendChild(p);
       console.log("opening WhatsApp");
       window.open("https://web.whatsapp.com/");
+      let go = "opening WhatsApp";
+      sp(go);
     }
     if (text.includes("open GitHub")) {
       p = document.createElement("p");
@@ -120,6 +134,8 @@ recognition.addEventListener("result", (e) => {
       texts.appendChild(p);
       console.log("opening GitHub");
       window.open("https://github.com/");
+      let go = "opening Github";
+      sp(go);
     }
     if (text.includes("Google Maps") || text.includes("Maps")) {
       let str = text;
@@ -130,6 +146,8 @@ recognition.addEventListener("result", (e) => {
       texts.appendChild(p);
       console.log("opening Maps");
       window.open("https://www.google.com/maps");
+      let go = "opening Maps";
+      sp(go);
     }
     if (text.includes("search")) {
       let str = text;
@@ -140,6 +158,8 @@ recognition.addEventListener("result", (e) => {
       texts.appendChild(p);
       console.log("opening...");
       window.open("https://www.google.com/search?q=" + str);
+      let go = "searching for" + str;
+      sp(go);
     }
     if (text.includes("find") || text.includes("Find")) {
       let str = text;
@@ -151,6 +171,8 @@ recognition.addEventListener("result", (e) => {
       texts.appendChild(p);
       console.log("opening...");
       window.open("https://www.google.com/search?q=" + str);
+      let go = "searching for" + str;
+      sp(go);
     }
     if (text.includes("What is") || text.includes("what is")) {
       let str = text;
@@ -162,6 +184,8 @@ recognition.addEventListener("result", (e) => {
       texts.appendChild(p);
       console.log("opening...");
       window.open("https://www.google.com/search?q=" + str);
+      let go = "searching for" + str;
+      sp(go);
     }
     if (text.includes("Who is") || text.includes("who is")) {
       let str = text;
@@ -173,6 +197,8 @@ recognition.addEventListener("result", (e) => {
       texts.appendChild(p);
       console.log("opening...");
       window.open("https://www.google.com/search?q=" + str);
+      let go = "searching for " + str;
+      sp(go);
     }
     if (text.includes("Tìm") || text.includes("tìm")) {
       let str = text;
@@ -185,6 +211,8 @@ recognition.addEventListener("result", (e) => {
       texts.appendChild(p);
       console.log("opening...");
       window.open("https://www.google.com/search?q=" + str);
+      let go = "searching for " + str;
+      sp(go);
     }
     if (text.includes("Watch") || text.includes("watch")) {
       let str = text;
@@ -196,6 +224,8 @@ recognition.addEventListener("result", (e) => {
       texts.appendChild(p);
       console.log("opening...");
       window.open("https://www.youtube.com/results?search_query=" + str);
+      let go = "opening " + str + " on YouTube";
+      sp(go);
     }
     if (text.includes("Xem") || text.includes("xem")) {
       let str = text;
@@ -208,6 +238,8 @@ recognition.addEventListener("result", (e) => {
       texts.appendChild(p);
       console.log("opening...");
       window.open("https://www.youtube.com/results?search_query=" + str);
+      let go = "opening " + str + " on YouTube";
+      sp(go);
     }
     if (text.includes("Mở") || text.includes("mở")) {
       let str = text;
@@ -220,6 +252,8 @@ recognition.addEventListener("result", (e) => {
       texts.appendChild(p);
       console.log("opening...");
       window.open("https://www.youtube.com/results?search_query=" + str);
+      let go = "opening " + str + " on YouTube";
+      sp(go);
     }
     if (text.includes("See") || text.includes("see")) {
       let str = text;
@@ -231,6 +265,8 @@ recognition.addEventListener("result", (e) => {
       texts.appendChild(p);
       console.log("opening...");
       window.open("https://www.youtube.com/results?search_query=" + str);
+      let go = "opening " + str + " on YouTube";
+      sp(go);
     }
     p = document.createElement("p");
   }
@@ -242,6 +278,7 @@ recognition.addEventListener("end", () => {
 
 recognition.start();
 
-const replaywithspeech = document.getElementbyClass("replay");
-const utterance = new SpeechSynthesisUtterance(replaywithspeech.value);
+function sp(let a) {
+const utterance = new SpeechSynthesisUtterance(a);
 window.speechSynthesis.speak(utterance);      
+}
