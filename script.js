@@ -21,12 +21,9 @@ recognition.addEventListener("result", (e) => {
       p = document.createElement("p");
       p.classList.add("replay");
       p.innerText = "opening youtube\n🎭";
-      let pppp = "opening youtube";
       texts.appendChild(p);
       console.log("opening youtube");
       window.open("https://www.youtube.com");
-      const utterance = new SpeechSynthesisUtterance(pppp);
-      window.speechSynthesis.speak(utterance);      
     }
     if (text.includes("open Gmail")) {
       p = document.createElement("p");
@@ -44,14 +41,6 @@ recognition.addEventListener("result", (e) => {
       console.log("opening facebook");
       window.open("https://www.facebook.com/");
     }
-    if (text.includes("open zalo")) {
-      p = document.createElement("p");
-      p.classList.add("replay");
-      p.innerText = "opening zalo\n👌";
-      texts.appendChild(p);
-      console.log("opening zalo");
-      window.open("https://chat.zalo.me/");
-    }
     if (text.includes("open map")) {
       p = document.createElement("p");
       p.classList.add("replay");
@@ -59,14 +48,6 @@ recognition.addEventListener("result", (e) => {
       texts.appendChild(p);
       console.log("opening map");
       window.open("https://www.google.com/maps/");
-    }
-    if (text.includes("play game") || text.includes("open game") || text.includes("Open game") || text.includes("Play game")) {
-      p = document.createElement("p");
-      p.classList.add("replay");
-      p.innerText = "opening game\n";
-      texts.appendChild(p);
-      console.log("opening game");
-      window.open("https://game.thomwebsite.com");
     }
     if (text.includes("open translate") || text.includes("Open translate")) {
       p = document.createElement("p");
@@ -82,7 +63,7 @@ recognition.addEventListener("result", (e) => {
       p.innerText = "opening new tab\n";
       texts.appendChild(p);
       console.log("opening new tab");
-      window.open("https://google.com/");
+      window.open("https://google.com/");  
     }
     if (text.includes("open google meet") || text.includes("open meet")) {
       p = document.createElement("p");
@@ -91,14 +72,6 @@ recognition.addEventListener("result", (e) => {
       texts.appendChild(p);
       console.log("opening google meet");
       window.open("https://meet.google.com/");
-    }
-    if (text.includes("open coder chat") || text.includes("open chat") || text.includes("open ed") || text.includes("open Ed")) {
-      p = document.createElement("p");
-      p.classList.add("replay");
-      p.innerText = "opening Ed\n🤗";
-      texts.appendChild(p);
-      console.log("opening Ed");
-      window.open("https://edstem.org/us/dashboard");
     }
     if (text.includes("open messenger") || text.includes("open Messenger") || text.includes("Open messenger") || text.includes("Open Messenger")) {
       p = document.createElement("p");
@@ -268,3 +241,7 @@ recognition.addEventListener("end", () => {
 });
 
 recognition.start();
+
+const replaywithspeech = document.getElementbyClass("replay");
+const utterance = new SpeechSynthesisUtterance(replaywithspeech.value);
+window.speechSynthesis.speak(utterance);      
